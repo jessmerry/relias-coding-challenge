@@ -10,5 +10,14 @@
 </head>
 <body>
 	<h1>Merry Movie Database</h1>
+	<div id="moviePreview">
+		<form action="/" id="search">
+			<input type="text" name="userInput" id="user-input" placeholder="Merry Movie Database" required>
+			<label for="userInput"></label>
+			<button type="submit" id="searchButton">Search</button>
+			<button onClick="window.location.reload();" id="clearButton">Clear</button>
+		</form>
+	</div>
+	<div id="movieDiv"></div>
 </body>
 </html>
