@@ -1,5 +1,5 @@
 console.log("movie time")
-// const Bearer = [afec887cbc52a82768be3c313b8f1feb]
+const Bearer = 'afec887cbc52a82768be3c313b8f1feb'
 
 let moviePreviewDiv = document.querySelector('moviePreview')
 
@@ -14,9 +14,9 @@ formBox.addEventListener ('submit', function(event) {
 	console.log(userInput.value)
 
 
-fetch(`https://api.themoviedb.org/3/search/movie?api_key=afec887cbc52a82768be3c313b8f1feb&query=${userInput.value}`, {
+fetch(`https://api.themoviedb.org/3/search/movie?api_key=${Bearer}&query=${userInput.value}`, {
 	method: 'GET',
-	headers: { 'Authorization': 'Bearer afec887cbc52a82768be3c313b8f1feb',
+	headers: { 'Authorization': 'Bearer',
 				'Content-Type': 'application/json,charset:utf-8'}
 })
 .then (function (response){
@@ -44,6 +44,16 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=afec887cbc52a82768be3c3
 				nameDiv.classList.add('original_title')
 				nameDiv.innerText = result.original_title
 				movieCard.appendChild(nameDiv)
+			
+			let dateDiv = document.createElement('div')
+				dateDiv.classList.add('release_date')
+				dateDiv.innerText = result.release_date
+				movieCard.appendChild(dateDiv)
+			
+			let overviewDiv = document.createElement('div')
+				overviewDiv.classList.add('overview')
+				overviewDiv.innerText = result.overview
+				movieCard.appendChild(overviewDiv)
 
 			movieContainer.appendChild(movieCard)
 		}
