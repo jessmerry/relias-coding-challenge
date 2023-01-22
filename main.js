@@ -1,5 +1,5 @@
 console.log("movie time")
-const Bearer = 'afec887cbc52a82768be3c313b8f1feb'
+const api_key = 'afec887cbc52a82768be3c313b8f1feb'
 
 let moviePreviewDiv = document.querySelector('moviePreview')
 
@@ -14,7 +14,7 @@ formBox.addEventListener ('submit', function(event) {
 	console.log(userInput.value)
 
 
-fetch(`https://api.themoviedb.org/3/search/movie?api_key=${Bearer}&query=${userInput.value}`, {
+fetch(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${userInput.value}`, {
 	method: 'GET',
 	headers: { 'Authorization': 'Bearer',
 				'Content-Type': 'application/json,charset:utf-8'}
@@ -54,6 +54,11 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=${Bearer}&query=${userI
 				overviewDiv.classList.add('overview')
 				overviewDiv.innerText = result.overview
 				movieCard.appendChild(overviewDiv)
+			
+			let posterDiv = document.createElement('img')
+				posterDiv.classList.add('poster_path')
+				posterDiv.innerText =result.poster_path
+				movieCard.appendChild(posterDiv)
 
 			movieContainer.appendChild(movieCard)
 		}

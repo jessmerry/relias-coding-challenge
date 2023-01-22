@@ -1,0 +1,56 @@
+h1{
+    color:rgb(116, 62, 80);
+    justify-content: baseline;
+    text-align: center;
+    line-height: 200px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url("https://www.jeadigitalmedia.org/wp-content/uploads/2012/07/header_royaltyfree_music1.jpg");
+    border: 5px solid rgb(105, 41, 59);
+    border-radius: 25px;
+}
+
+.original_title {
+	border: 2px solid rgb(136, 84, 106);
+	font-size:x-large;
+}
+
+.release_date {
+	border: 2px solid rgb(105, 155, 154);
+}
+
+.overview {
+	border: 2px solid rgb(170, 184, 141);
+}
+
+#search {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchButton {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#clearButton {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.movieCard {
+	border: 5px solid rgb(67, 36, 36);
+	border-radius: 10px;
+	width: 33%;
+	display: flex;
+	margin: 10px;
+	flex-direction: column;
+	background-color: rgb(197, 229, 218);
+}
+
+#movieDiv {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    text-align: center;
+}
