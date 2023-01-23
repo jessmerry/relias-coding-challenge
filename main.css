@@ -45,11 +45,11 @@ body {
 	padding: 10px;
 }
 
-.searchButton {
+#searchButton {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.clearButton {
+#clearButton {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
