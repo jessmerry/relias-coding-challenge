@@ -24,12 +24,16 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${user
 })
 .then (function (data){
 
-	if (data.results === 0) {
+	if (data.results.length === 0) {
 		console.log('no results')
+		let movieCard = document.createElement('div')
+		movieCard.classList.add('movieCard')
 		let noResultsDiv = document.createElement('div')
-		noResultsDiv.innerText = "No Results"
+		let noResultsText = document.createTextNode('Sorry, no results for that search!')
+		noResultsDiv.appendChild(noResultsText);
+		document.body.insertBefore(noResultsDiv, movieContainer);
 		noResultsDiv.classList.add('no-results')
-		moviePreviewDiv.appendChild(noResultsDiv)
+		// movieCard.appendChild(noResultsDiv)
 		return;
 	}
 
