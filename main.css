@@ -1,25 +1,33 @@
-h1{
-    color:rgb(116, 62, 80);
-    justify-content: baseline;
-    text-align: center;
-    line-height: 200px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-image: url("https://www.jeadigitalmedia.org/wp-content/uploads/2012/07/header_royaltyfree_music1.jpg");
-    border: 5px solid rgb(105, 41, 59);
-    border-radius: 25px;
+img {
+	width: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+	background-color: #F7F7F2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .original_title {
-	border: 2px solid rgb(136, 84, 106);
+	color: #F7F7F2;
 	font-size:x-large;
+	padding: 5px;
 }
 
 .release_date {
-	border: 2px solid rgb(105, 155, 154);
+	color: #F7F7F2;
+	padding: 5px;
+	font-weight: bold;
 }
 
 .overview {
-	border: 2px solid rgb(170, 184, 141);
+	color: #F7F7F2;
+	padding: 5px;
 }
 
 #search {
@@ -27,6 +35,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+	padding: 10px;
 }
 
 #searchButton {
@@ -38,13 +47,14 @@ h1{
 }
 
 .movieCard {
-	border: 5px solid rgb(67, 36, 36);
 	border-radius: 10px;
-	width: 33%;
+	width: 50%;
 	display: flex;
 	margin: 10px;
 	flex-direction: column;
-	background-color: rgb(197, 229, 218);
+	padding: 30px;
+	background-color: #2E4057;
+	box-shadow: 10px 10px 5px rgb(223, 227, 228);
 }
 
 #movieDiv {

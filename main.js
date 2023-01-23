@@ -55,10 +55,10 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${user
 				overviewDiv.innerText = result.overview
 				movieCard.appendChild(overviewDiv)
 			
-			let posterDiv = document.createElement('img')
-				posterDiv.classList.add('poster_path')
-				posterDiv.innerText =result.poster_path
-				movieCard.appendChild(posterDiv)
+			// let posterDiv = document.createElement('img')
+			// 	posterDiv.classList.add('img')
+			// 	posterDiv.src = result.poster_path
+			// 	movieCard.appendChild(posterDiv)
 
 			movieContainer.appendChild(movieCard)
 		}
