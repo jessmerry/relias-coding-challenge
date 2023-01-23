@@ -29,11 +29,10 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${user
 		let movieCard = document.createElement('div')
 		movieCard.classList.add('movieCard')
 		let noResultsDiv = document.createElement('div')
-		let noResultsText = document.createTextNode('Sorry, no results for that search!')
+		let noResultsText = document.createTextNode('You silly goose! That is not a movie!')
 		noResultsDiv.appendChild(noResultsText);
 		document.body.insertBefore(noResultsDiv, movieContainer);
 		noResultsDiv.classList.add('no-results')
-		// movieCard.appendChild(noResultsDiv)
 		return;
 	}
 
@@ -44,6 +43,11 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${user
 		for (let result of results) {
 			let movieCard = document.createElement('div')
 				movieCard.classList.add('movieCard')
+
+			let posterDiv = document.createElement('img')
+				posterDiv.classList.add('poster')
+				posterDiv.src = 'https://image.tmdb.org/t/p/original' + result.poster_path
+				movieCard.appendChild(posterDiv)
 
 			let nameDiv = document.createElement('div')
 				nameDiv.classList.add('original_title')
@@ -59,11 +63,6 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${user
 				overviewDiv.classList.add('overview')
 				overviewDiv.innerText = result.overview
 				movieCard.appendChild(overviewDiv)
-			
-			// let posterDiv = document.createElement('img')
-			// 	posterDiv.classList.add('img')
-			// 	posterDiv.src = result.poster_path
-			// 	movieCard.appendChild(posterDiv)
 
 			movieContainer.appendChild(movieCard)
 		}
