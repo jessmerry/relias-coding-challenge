@@ -13,6 +13,10 @@ body {
 	align-items: center;
 }
 
+.moviePreview {
+	background-image: url(images/moviereel.png);
+}
+
 .original_title {
 	color: #F7F7F2;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -30,6 +34,7 @@ body {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	color: #F7F7F2;
 	padding: 5px;
+	font-size: large;
 }
 
 #search {
@@ -57,6 +62,7 @@ body {
 	padding: 30px;
 	background-color: #2E4057;
 	box-shadow: 10px 10px 5px rgb(223, 227, 228);
+	background-image: url(images/horizontalmoviereel.png)
 }
 
 #movieDiv {
