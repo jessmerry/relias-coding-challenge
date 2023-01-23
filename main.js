@@ -24,7 +24,7 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${user
 })
 .then (function (data){
 
-	if (data.resultCount === 0) {
+	if (data.results === 0) {
 		console.log('no results')
 		let noResultsDiv = document.createElement('div')
 		noResultsDiv.innerText = "No Results"
@@ -32,6 +32,7 @@ fetch(`https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${user
 		moviePreviewDiv.appendChild(noResultsDiv)
 		return;
 	}
+
 
 	let results = data.results
 	console.log(data)
